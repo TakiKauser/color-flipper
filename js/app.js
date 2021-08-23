@@ -1,0 +1,12 @@
+const colorByName = ["darkred", "brown", "firebrick", "crimson", "maroon", "red", "tomato", "coral", "indianred", "lightcoral", "darksalmon", "salmon", "lightsalmon", "orange", "darkorange", "orangered", "gold", "darkgoldenrod", "goldenrod", "palegoldenrod", "darkkhaki", "khaki", "olive", "yellow", "yellowgreen", "darkolivegreen", "olivedrab", "lawngreen", "chartreuse", "greenyellow", "darkgreen", "green", "forestgreen", "lime", "limegreen", "lightgreen", "palegreen", "darkseagreen", "mediumspringgreen", "springgreen", "seagreen", "mediumaquamarine", "mediumseagreen", "lightseagreen", "darkslategray", "teal", "darkcyan", "aqua", "cyan", "lightcyan", "darkturquoise", "turquoise", "mediumturquoise", "paleturquoise", "aquamarine", "powderblue", "cadetblue", "steelblue", "cornflowerblue", "deepskyblue", "dodgerblue", "lightblue", "skyblue", "lightsky", "midnight", "navy", "darkblue", "mediumblue", "blue", "royalblue", "blueviolet", "indigo", "darkslateblue", "slateblue", "mediumslateblue", "mediumpurple", "darkmagenta", "darkviolet", "darkorchid", "mediumorchid", "purplepurple", "thistlethistle", "plum", "violet", "fuchsia", "orchid", "mediumvioletred", "palevioletred", "deeppink", "hotpink", "lightpink", "pink", "antiquewhite", "beigebeige", "bisquebisque", "blanchedalmond", "wheat", "cornsilk", "lemonchiffon", "lightgoldenrod", "lightyellow", "saddlebrown", "siennasienna", "chocolate", "peru", "sandybrown", "burlywood", "tantan", "rosybrown", "moccasin", "navajowhite", "peachpuff", "mistyrose", "lavenderblush", "linen", "oldlace", "papayawhip", "seashell", "mintcream", "slategray", "lightslategray", "lightsteelblulavender", "floralwhite", "aliceblue", "ghostwhite", "honeydew", "ivory", "azure", "snow"
+    , "dimgray", "gray", "darkgray", "silver", "lightgray", "gainsboro", "whitesmoke", "white"]
+const button = document.getElementById("color-flipper-btn");
+const color = document.getElementById("hex-color-code");
+
+button.addEventListener("click", () => {
+    let colorName = "";
+    colorName += colorByName[getRandomNumber()];
+    color.innerText = colorName;
+    document.body.style.backgroundColor = colorName;
+});
+const getRandomNumber = () => (Math.floor(Math.random() * colorByName.length));
